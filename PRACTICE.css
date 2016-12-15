@@ -1,0 +1,69 @@
+
+.outer-box{
+  width:200px;
+  height: 200px;
+  border: 2px solid navy;
+    position: relative
+  
+}
+.box{
+  width:100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  top:0px;
+  left: 0px;
+  animation: 4s rotate infinite cubic-bezier(.2,1,.88,.16) ;
+}
+
+@keyframes rotate{
+  0%{
+      color:red;
+      left: 0px;
+      top: 0px;
+  }
+  25%{
+    color: yellow;
+    left: 100px;
+    top:0px;
+  }
+  50%{
+    color: blue;
+    left: 100px;   
+    top:100px;
+    }
+   75%{
+    color: greenyellow;
+    left:0px;   
+    top:100px;  
+    }
+  100%{
+      color:red;
+      left: 0px;
+      top: 0px;
+  }
+}
+@media (max-width: 767px) {
+    body{
+        transition: 2s;
+        background-color:red;}
+}
+@media (max-width: 480px) {
+    body{
+        transition: 2s;
+        background-color:pink;}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    body{
+        transition: 2s;
+        background:green;}
+}
+@media (min-width: 980px) {
+    body{
+        transition: 2s;
+        background:orange;}
+}
+@media (min-width: 1200px) {
+    body{
+        transition: 2s;
+        background:yellow;}
